@@ -1,0 +1,41 @@
+Jefes de carrera->agregar a todos
+jefe de carrera-> darle privilegios a cada uno
+Alumno->continuar registtro
+1680*750
+840* 375
+UPDATE `ss_alumnos` SET `sexo`='Femenino',`carrera`='IGE' WHERE id>=2 AND id<=5;
+UPDATE `ss_alumnos` SET `sexo`='Masculino',`carrera`='IGE' WHERE id>=6 AND id<=10;
+UPDATE `ss_alumnos` SET `sexo`='Femenino',`carrera`='IND' WHERE id>=11 AND id<=15;
+UPDATE `ss_alumnos` SET `sexo`='Masculino',`carrera`='IND' WHERE id>=16 AND id<=20;
+UPDATE `ss_alumnos` SET `sexo`='Femenino',`carrera`='ISC' WHERE id>=21 AND id<=25;
+UPDATE `ss_alumnos` SET `sexo`='Masculino',`carrera`='ISC' WHERE id>=26 AND id<=30;
+UPDATE `ss_alumnos` SET `sexo`='Femenino',`carrera`='TSM' WHERE id>=31 AND id<=35;
+UPDATE `ss_alumnos` SET `sexo`='Masculino',`carrera`='TSM' WHERE id>=36 AND id<=40;
+UPDATE `ss_alumnos` SET `sexo`='Femenino',`carrera`='LA' WHERE id>=41 AND id<=45;
+UPDATE `ss_alumnos` SET `sexo`='Masculino',`carrera`='LA' WHERE id>=46 AND id<=50;
+UPDATE `ss_alumnos` SET `sexo`='Femenino',`carrera`='INFS' WHERE id>=51 AND id<=55;
+UPDATE `ss_alumnos` SET `sexo`='Masculino',`carrera`='INFS' WHERE id>=56 AND id<=60;
+UPDATE `ss_alumnos` SET `sexo`='Femenino',`carrera`='IGES' WHERE id>=61 AND id<=65;
+UPDATE `ss_alumnos` SET `sexo`='Masculino',`carrera`='IGES' WHERE id>=66 AND id<=70;
+
+
+
+Estadisticas...
+Dar diseño a las tablas de anexos
+VALIDACIOnes
+revicion de ortografia panel de alumno y diseño
+
+y revicion de migrciones...
+
+
+
+Documentos.....
+°SOLICITUD DE SERVICIO SOCIAL
+CARTA DE PRESENTACIÓN PARA LA REALIZACIÓN DEL SERVICIO SOCIAL.
+CARTA COMPROMISO DE SERVICIO SOCIAL 
+°REPORTE BIMESTRAL DE SERVICIO SOCIAL.
+°FORMATO DE EVALUACIÓN CUALITATIVA DEL PRESTADOR DE SERVICIO SOCIAL.
+°FORMATO DE AUTOEVALUACIÓN CUALITATIVA DEL PRESTADOR DE SERVICIO SOCIAL.
+°FORMATO DE EVALUACIÓN DE LAS ACTIVIDADES POR EL PRESTADOR DE SERVICIO SOCIAL.
+CARTA DE TERMINACIÓN DE SERVICIO SOCIAL 
+CONSTANCIA DE TERMINACIÓN DE SERVICIO SOCIAL
