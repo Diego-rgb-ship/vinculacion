@@ -30,11 +30,12 @@
 						<th>Apellido paterno:</th>
 						<th>Número de control:</th>
 						<th>Genero:</th>
-						<th>Semestre:</th>
+						<th>Periodo:</th>
 						<th>Carrera: </th>
 						<th>Correo electronico:</th>
-						
 						<th>Seguimiento:</th>
+						<th>Status:</th>
+
 					</tr>
 				</thead>
                 <tbody>
@@ -45,10 +46,11 @@
 							<td>{{$alumno->user->apellido_m}}</td>
 							<td>{{$alumno->no_control}}</td>
 							<td>{{$alumno->sexo}}</td>
-							<td>{{$alumno->semestre}}</td>
+							<td>{{$alumno->periodo}}</td>
 							<td>{{$alumno->carrera}}</td>
 							<td>{{$alumno->correo}}</td>
 							<td><a href="{{route('seguimiento.alumno.perfil', $alumno->no_control)}}" style="color: #1B396A;">Ver perfil completo</a></td>
+							<td><a href="{{route('seguimiento.alumno.perfil', $alumno->no_control)}}" style="color: #1B396A;">Editar</a></td>
 						</tr>
 					@endforeach
 				</tbody>

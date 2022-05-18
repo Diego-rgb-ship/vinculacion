@@ -2,18 +2,21 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Http\Request;
-use App\Subir_doc;
 use App\User;
+use App\Subir_doc;
 use Laracasts\Flash\Flash;
+use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
+use App\Http\Controllers\Controller;
+use Illuminate\Support\Facades\Auth;
+
 
 class SubirdocController extends Controller
 {
     public function index()
     {
     	$useralumnos	= User::find(\Auth::user()->id);
-    	$documentos	= Subir_doc::orderBy('nombre_doc','ACS')->where('no_control','=', \Auth::user()->id)->paginate(5);
+    	$documentos	= Subir_doc::orderBy('nombre_doc','ASC')->where('no_control','=', \Auth::user()->id)->paginate(5);
 
     	return view('documentos.index')->with('useralumnos',$useralumnos)->with('documentos',$documentos);
     }

@@ -46,7 +46,8 @@
                       <thead>
                         <tr>
                           <th scope="col">Nombre del documento:</th>
-                          <th scope="col">Número de reporte:</th>
+                          <th scope="col">Nombre de reporte:</th>
+                          <th scope="col">Retroalimentación:</th>
                         </tr>
                       </thead>
                       <tbody>

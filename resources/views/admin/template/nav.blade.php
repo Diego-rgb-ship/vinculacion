@@ -12,6 +12,7 @@
                         <a href="{{ url('admin/')}}" class="dropdown-item">Genero</a>
                         <a href="{{route('estadistica.facualpss')}}" class="dropdown-item">Autoevaluación</a>
                         <a href="{{route('estadistica.fecualpss')}}" class="dropdown-item">Evaluación</a>
+                        <a href="{{route('estadistica.fecualpss')}}" class="dropdown-item">Area</a>
                         <a href="{{route('estadistica.feapsss')}}" class="dropdown-item">Actividades</a>
                     </div>
             </li>
@@ -49,13 +50,12 @@
                 <ul id="ige" class="list-unstyled collapse">
                     <li><a href="{{route('seguimiento.indexige')}}">Todos</a></li>
                     <li><a href="#igess" data-toggle="collapse">
-                         Semestre
+                         Periodo
                         </a></li>
                         <ul id="igess" class="list-unstyled collapse">
-                            <li><a href="{{route('seguimiento.indexiges5')}}">Semestre 5</a></li>
-                            <li><a href="{{route('seguimiento.indexiges6')}}">Semestre 6</a></li>
-                            <li><a href="{{route('seguimiento.indexiges7')}}">Semestre 7</a></li>
-                            <li><a href="{{route('seguimiento.indexiges8')}}">Semestre 8</a></li>
+
+                            <li><a href="{{route('seguimiento.indexiges7')}}">Agosto-Diciembre</a></li>
+                            <li><a href="{{route('seguimiento.indexiges8')}}">Enero-Junio</a></li>
                         </ul>
                 </ul>
             </li>
@@ -68,13 +68,12 @@
                 <ul id="ii" class="list-unstyled collapse">
                     <li><a href="{{route('seguimiento.indexind')}}">Todos</a></li>
                     <li><a href="#indss" data-toggle="collapse">
-                         Semestre
+                        Periodo
                         </a></li>
                         <ul id="indss" class="list-unstyled collapse">
-                            <li><a href="{{route('seguimiento.indexinds5')}}">Semestre 5</a></li>
-                            <li><a href="{{route('seguimiento.indexinds6')}}">Semestre 6</a></li>
-                            <li><a href="{{route('seguimiento.indexinds7')}}">Semestre 7</a></li>
-                            <li><a href="{{route('seguimiento.indexinds8')}}">Semestre 8</a></li>
+         
+                            <li><a href="{{route('seguimiento.indexinds7')}}">Agosto-Diciembre</a></li>
+                            <li><a href="{{route('seguimiento.indexinds8')}}">Enero-Junio</a></li>
                         </ul>
                 </ul>
             </li>
@@ -87,13 +86,12 @@
                 <ul id="isc" class="list-unstyled collapse">
                     <li><a href="{{route('seguimiento.indexisc')}}">Todos</a></li>
                     <li><a href="#iscs" data-toggle="collapse">
-                         Semestre
+                        Periodo
                         </a></li>
                         <ul id="iscs" class="list-unstyled collapse">
-                            <li><a href="{{route('seguimiento.indexiscs5')}}">Semestre 5</a></li>
-                            <li><a href="{{route('seguimiento.indexiscs6')}}">Semestre 6</a></li>
-                            <li><a href="{{route('seguimiento.indexiscs7')}}">Semestre 7</a></li>
-                            <li><a href="{{route('seguimiento.indexiscs8')}}">Semestre 8</a></li>
+                            
+                            <li><a href="{{route('seguimiento.indexiscs7')}}">Agosto-Diciembre</a></li>
+                            <li><a href="{{route('seguimiento.indexiscs8')}}">Enero-Junio</a></li>
                         </ul>
                 </ul>
             </li>
@@ -106,13 +104,11 @@
                 <ul id="admon" class="list-unstyled collapse">
                     <li><a href="{{route('seguimiento.indexla')}}">Todos</a></li>
                     <li><a href="#las" data-toggle="collapse">
-                         Semestre
+                        Periodo
                         </a></li>
                         <ul id="las" class="list-unstyled collapse">
-                            <li><a href="{{route('seguimiento.indexlas5')}}">Semestre 5</a></li>
-                            <li><a href="{{route('seguimiento.indexlas6')}}">Semestre 6</a></li>
-                            <li><a href="{{route('seguimiento.indexlas7')}}">Semestre 7</a></li>
-                            <li><a href="{{route('seguimiento.indexlas8')}}">Semestre 8</a></li>
+                            <li><a href="{{route('seguimiento.indexlas7')}}">Agosto-Diciembre</a></li>
+                            <li><a href="{{route('seguimiento.indexlas8')}}">Enero-Junio</a></li>
                         </ul>
                 </ul>
             </li>
@@ -125,13 +121,12 @@
                 <ul id="tsm" class="list-unstyled collapse">
                     <li><a href="{{route('seguimiento.indextsm')}}">Todos</a></li>
                     <li><a href="#tsms" data-toggle="collapse">
-                         Semestre
+                        Periodo
                         </a></li>
                         <ul id="tsms" class="list-unstyled collapse">
-                            <li><a href="{{route('seguimiento.indextsms5')}}">Semestre 5</a></li>
-                            <li><a href="{{route('seguimiento.indextsms6')}}">Semestre 6</a></li>
-                            <li><a href="{{route('seguimiento.indextsms7')}}">Semestre 7</a></li>
-                            <li><a href="{{route('seguimiento.indextsms8')}}">Semestre 8</a></li>
+
+                            <li><a href="{{route('seguimiento.indextsms7')}}">Agosto-Diciembre</a></li>
+                            <li><a href="{{route('seguimiento.indextsms8')}}">Enero-Junio</a></li>
                         </ul>
                 </ul>
             </li>
@@ -144,13 +139,11 @@
                 <ul id="inf" class="list-unstyled collapse">
                     <li><a href="{{route('seguimiento.indexinfs')}}">Todos</a></li>
                     <li><a href="#infs" data-toggle="collapse">
-                         Semestre
+                        Periodo
                         </a></li>
                         <ul id="infs" class="list-unstyled collapse">
-                            <li><a href="{{route('seguimiento.indexinfss5')}}">Semestre 5</a></li>
-                            <li><a href="{{route('seguimiento.indexinfss6')}}">Semestre 6</a></li>
-                            <li><a href="{{route('seguimiento.indexinfss7')}}">Semestre 7</a></li>
-                            <li><a href="{{route('seguimiento.indexinfss8')}}">Semestre 8</a></li>
+                            <li><a href="{{route('seguimiento.indexinfss7')}}">Agosto-Diciembre</a></li>
+                            <li><a href="{{route('seguimiento.indexinfss8')}}">Enero-Junio</a></li>
                         </ul>
                 </ul>
             </li>
@@ -163,13 +156,12 @@
                 <ul id="iged" class="list-unstyled collapse">
                     <li><a href="{{route('seguimiento.indexiges')}}">Todos</a></li>
                     <li><a href="#igesss" data-toggle="collapse">
-                         Semestre
+                        Periodo
                         </a></li>
                         <ul id="igesss" class="list-unstyled collapse">
-                            <li><a href="{{route('seguimiento.indexigess5')}}">Semestre 5</a></li>
-                            <li><a href="{{route('seguimiento.indexigess6')}}">Semestre 6</a></li>
-                            <li><a href="{{route('seguimiento.indexigess7')}}">Semestre 7</a></li>
-                            <li><a href="{{route('seguimiento.indexigess8')}}">Semestre 8</a></li>
+      
+                            <li><a href="{{route('seguimiento.indexigess7')}}">Agosto-Diciembre</a></li>
+                            <li><a href="{{route('seguimiento.indexigess8')}}">Enero-Junio</a></li>
                         </ul>
                 </ul>
             </li>

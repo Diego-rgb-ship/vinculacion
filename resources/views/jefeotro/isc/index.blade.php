@@ -30,7 +30,7 @@ Alumnos de ISC
 						<th>Segundo apellido:</th>
 						<th>Número de control:</th>
 						<th>Género:</th>
-						<th>Semestre:</th>
+						<th>Periodo:</th>
 						<th>Correo:</th>
 						<th>Seguimiento:</th>
 					</tr>
@@ -43,7 +43,7 @@ Alumnos de ISC
 							<td>{{$alumno->user->apellido_m}}</td>
 							<td>{{$alumno->no_control}}</td>
 							<td>{{$alumno->sexo}}</td>
-							<td>{{$alumno->semestre}}</td>
+							<td>{{$alumno->periodo}}</td>
 							<td>{{$alumno->correo}}</td>
 							<td><a href="{{route('seguimiento.alumno.perfil', $alumno->no_control)}}" style="color: #1B396A;">Ver perfil completo</a></td>
 						</tr>

@@ -45,7 +45,7 @@ class Admin
         }
         if($this->auth->User()->jefe_otros())
         {
-            return redirect()->route('seguimiento.indexisc');
+            return $next($request);
         }
         else
         {

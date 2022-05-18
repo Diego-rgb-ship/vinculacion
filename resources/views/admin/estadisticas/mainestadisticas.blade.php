@@ -12,7 +12,7 @@ google.charts.setOnLoadCallback(drawTitleSubtitle);
 
 function drawTitleSubtitle() {
       var data = google.visualization.arrayToDataTable([
-        ['Genero', 'Hombres', 'Mujeres'],
+        ['Género', 'Hombres', 'Mujeres'],
         ['IGE', {{$alumnoshige}}, {{$alumnosmige}}],
         ['IND', {{$alumnoshind}}, {{$alumnosmind}}],
         ['ISC', {{$alumnoshisc}}, {{$alumnosmisc}}],
