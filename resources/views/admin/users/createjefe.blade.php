@@ -14,11 +14,11 @@
 					{!!Form::text('nombres', null,['class'=>'form-control', 'placeholder'=>'Nombre(s)', 'required'])!!}
 				</div>
 				<div class="form-group">
-					{!!Form::label('apellido_p', 'Apellido paterno')!!}
+					{!!Form::label('apellido_p', 'Primer apellido ')!!}
 					{!!Form::text('apellido_p', null,['class'=>'form-control', 'placeholder'=>'Apellido paterno', 'required'])!!}
 				</div>
 				<div class="form-group">
-					{!!Form::label('apellido_m', 'Apllido materno')!!}
+					{!!Form::label('apellido_m', 'Segundo apellido')!!}
 					{!!Form::text('apellido_m', null,['class'=>'form-control', 'placeholder'=>'Apellido materno', 'required'])!!}
 				</div>
 				<div class="form-group">

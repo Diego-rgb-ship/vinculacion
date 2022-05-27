@@ -1,5 +1,8 @@
 <?php
-
+use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\MailController;
+use App\Http\Controllers\ServiciosEscolares;
+use App\Http\Controllers\ServiciosEscolaresController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -602,6 +605,77 @@ Route::group(['prefix'=>'seguimiento', 'middleware' => ['auth','jefeotros']], fu
 
 });
 
+//Ruta para servicios escolares 
+Route::group(['prefix'=>'ServEsc', 'middleware' => 'auth'], function(){
+	Route::group(['middleware' => 'ServEsc'], function()
+	{
+	Route::get('/', [
+		'uses'	=>	'UsersController@estadisticas',
+		'as' => 'admin.welcome'
+	]);
+	Route::get('/estadistica/evaluacione/facualpss', [
+		'uses'	=>	'UsersController@estadisticasfacualpss',
+		'as' => 'estadistica.facualpss'
+	]);
+	Route::get('/estadistica/evaluacione/fecualpss', [
+		'uses'	=>	'UsersController@estadisticasfecualpss',
+		'as' => 'estadistica.fecualpss'
+	]);
+	Route::get('/estadistica/evaluacione/feapsss', [
+		'uses'	=>	'UsersController@estadisticasfeapsss',
+		'as' => 'estadistica.feapsss'
+	]);
+	//Consulta general
+	Route::get('alumnos2',[
+		'uses' 	=> 'ServiciosEscolaresController@alumnos2',
+		'as' 	=> 'alumnos2'
+		]);
+
+		Route::get('alumnos2/mujeres', [
+    	'uses'	=>	'ServiciosEscolaresController@alumnosmujeres',
+    	'as'	=>	'alumnos2.alumnosmujeres'
+    	]);
+
+    	Route::get('alumnos2/hombres', [
+    	'uses'	=>	'ServiciosEscolaresController@alumnoshombres',
+    	'as'	=>	'alumnos2.alumnoshombres'
+    	]);
+	//consulta IGE
+	Route::get('/ige', [
+    	'uses'	=>	'ServiciosEscolaresController@indexige',
+    	'as'	=>	'seguimiento2.indexige'
+    	]);
+	Route::get('ige/semestre/5', [
+		'uses'	=>	'ServiciosEscolaresController@indexigesemestre5',
+		'as'	=>	'seguimiento.indexiges5'
+		]);
+	Route::get('ige/semestre/6', [
+		'uses'	=>	'SeguimientoController@indexigesemestre6',
+		'as'	=>	'seguimiento.indexiges6'
+		]);
+	Route::get('ige/semestre/7', [
+		'uses'	=>	'SeguimientoController@indexigesemestre7',
+		'as'	=>	'seguimiento.indexiges7'
+		]);
+	Route::get('ige/semestre/8', [
+		'uses'	=>	'SeguimientoController@indexigesemestre8',
+		'as'	=>	'seguimiento.indexiges8'
+		]);
+	//consulta IND
+	Route::get('/ind', [
+    	'uses'	=>	'SeguimientoController@indexind',
+    	'as'	=>	'seguimiento.indexind'
+    	]);
+	//consulta isc
+	Route::get('/isc', [
+    	'uses'	=>	'SeguimientoController@indexisc',
+    	'as'	=>	'seguimiento.indexisc'
+    	]);
+
+	
+});
+});
+
 //Rutas para administrador
 Route::group(['prefix'=>'admin', 'middleware' => 'auth'], function(){
 
@@ -637,6 +711,12 @@ Route::group(['prefix'=>'admin', 'middleware' => 'auth'], function(){
 			'uses' => 'AccesosController@destroy',
 			'as' => 'admin.accesos.destroy'
 		]);	
+		//ruta para crear servicios escolares
+		Route::resource('serviciosescolares','ServiciosEscolaresController');
+		Route::get('serviciosescolares/{id}/destroy',[
+			'uses' => 'ServiciosEscolaresController@destroy',
+			'as' => 'admin.serviciosescolares.destroy'
+		]);
 		//Rutas para crear y administrar a los usuarios de tipo jefe de carrera 
 		Route::resource('jefecarrera','JefeCarreraController');
 
@@ -665,7 +745,10 @@ Route::group(['prefix'=>'admin', 'middleware' => 'auth'], function(){
     	'uses'	=>	'SeguimientoController@show',
     	'as'	=>	'seguimiento.alumno.perfil'
     ]);
-
+	Route::get('alumno/{id}', [
+    	'uses'	=>	'ComentarioController@show',
+    	'as'	=>	'seguimiento.alumno.perfil'
+    ]);
     Route::get('/download/{file}' , [
 		'uses'	=> 'SubirdocController@downloadFile',
 		'as'	=> 'descargar.archivo']);

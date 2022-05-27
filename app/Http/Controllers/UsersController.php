@@ -453,7 +453,7 @@ class UsersController extends Controller
     public function index()
     {
         
-        $users = User::orderBy('rol','ASC')->where('rol', 'Jefe')->orWhere('rol','Otro')->paginate(10);
+        $users = User::orderBy('rol','ASC')->where('rol', 'Jefe')->orWhere('rol','Otro')->orWhere('rol','SerEscolares')->paginate(10);
         
         return view('admin.index')->with('users',$users);
     } 

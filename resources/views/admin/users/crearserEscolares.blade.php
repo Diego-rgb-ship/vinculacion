@@ -1,9 +1,9 @@
 @extends('admin.template.main')
 
-@section('title', 'Crear usuario de tipo otro')
+@section('title', 'Crear usuario de servicios escolares')
 
 @section('content')
-{!! Form::open(['route'=>'users.store', 'method'=>'POST']) !!}
+{!! Form::open(['route'=>'serviciosescolares.store', 'method'=>'POST']) !!}
 <div class="col-md-24">	
 	<div class="form-horizontal">
         <div class="card-header">
@@ -45,5 +45,3 @@
 
 
 @endsection()
-
-

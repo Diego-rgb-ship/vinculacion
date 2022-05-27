@@ -19,12 +19,13 @@ class CreateUsersTable extends Migration
             $table->string('apellido_p');
             $table->string('apellido_m');
             $table->string('no_identificacion')->unique();
-            $table->enum('rol', ['Alumno','Jefe', 'Otro','Administrador', 'Acceso'])->default('Administrador');
+            $table->enum('rol', ['Alumno','Jefe', 'Otro','Administrador', 'Acceso','SerEscolares'])->default('Administrador');
             $table->enum('carrera', ['IGE','IND','ISC','LA','TSM','INFS','IGES','otro'])->default('otro');
             $table->string('password');
             $table->rememberToken();
             $table->timestamps();
         });
+        
     }
 
     /**

@@ -47,6 +47,10 @@ class Acceso
         {
             return redirect()->route('admin.welcome');
         }
+        if($this->auth->User()->ServEsc())
+        {
+            return redirect()->route('admin.welcome');
+        }
         if($this->auth->User()->alumnos())
         {
             return redirect('/');

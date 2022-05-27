@@ -43,6 +43,10 @@ class Admin
         {
             return redirect()->route('createacces');
         }
+        if($this->auth->User()->ServEsc())
+        {
+            return $next($request);
+        }
         if($this->auth->User()->jefe_otros())
         {
             return $next($request);

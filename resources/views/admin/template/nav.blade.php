@@ -12,7 +12,6 @@
                         <a href="{{ url('admin/')}}" class="dropdown-item">Genero</a>
                         <a href="{{route('estadistica.facualpss')}}" class="dropdown-item">Autoevaluación</a>
                         <a href="{{route('estadistica.fecualpss')}}" class="dropdown-item">Evaluación</a>
-                        <a href="{{route('estadistica.fecualpss')}}" class="dropdown-item">Area</a>
                         <a href="{{route('estadistica.feapsss')}}" class="dropdown-item">Actividades</a>
                     </div>
             </li>
@@ -36,6 +35,7 @@
     </div>
 </nav>
 
+
 <div class="d-flex">
     <div class="sidebar sidebar-dark bg-dark">
         <ul class="list-unstyled">
@@ -53,7 +53,7 @@
                          Periodo
                         </a></li>
                         <ul id="igess" class="list-unstyled collapse">
-
+                           
                             <li><a href="{{route('seguimiento.indexiges7')}}">Agosto-Diciembre</a></li>
                             <li><a href="{{route('seguimiento.indexiges8')}}">Enero-Junio</a></li>
                         </ul>
@@ -68,10 +68,10 @@
                 <ul id="ii" class="list-unstyled collapse">
                     <li><a href="{{route('seguimiento.indexind')}}">Todos</a></li>
                     <li><a href="#indss" data-toggle="collapse">
-                        Periodo
+                         Periodo
                         </a></li>
                         <ul id="indss" class="list-unstyled collapse">
-         
+                            
                             <li><a href="{{route('seguimiento.indexinds7')}}">Agosto-Diciembre</a></li>
                             <li><a href="{{route('seguimiento.indexinds8')}}">Enero-Junio</a></li>
                         </ul>
@@ -86,10 +86,10 @@
                 <ul id="isc" class="list-unstyled collapse">
                     <li><a href="{{route('seguimiento.indexisc')}}">Todos</a></li>
                     <li><a href="#iscs" data-toggle="collapse">
-                        Periodo
+                         Periodo
                         </a></li>
                         <ul id="iscs" class="list-unstyled collapse">
-                            
+                           
                             <li><a href="{{route('seguimiento.indexiscs7')}}">Agosto-Diciembre</a></li>
                             <li><a href="{{route('seguimiento.indexiscs8')}}">Enero-Junio</a></li>
                         </ul>
@@ -104,9 +104,10 @@
                 <ul id="admon" class="list-unstyled collapse">
                     <li><a href="{{route('seguimiento.indexla')}}">Todos</a></li>
                     <li><a href="#las" data-toggle="collapse">
-                        Periodo
+                         Periodo
                         </a></li>
                         <ul id="las" class="list-unstyled collapse">
+                            
                             <li><a href="{{route('seguimiento.indexlas7')}}">Agosto-Diciembre</a></li>
                             <li><a href="{{route('seguimiento.indexlas8')}}">Enero-Junio</a></li>
                         </ul>
@@ -121,10 +122,10 @@
                 <ul id="tsm" class="list-unstyled collapse">
                     <li><a href="{{route('seguimiento.indextsm')}}">Todos</a></li>
                     <li><a href="#tsms" data-toggle="collapse">
-                        Periodo
+                         Periodo
                         </a></li>
                         <ul id="tsms" class="list-unstyled collapse">
-
+                            
                             <li><a href="{{route('seguimiento.indextsms7')}}">Agosto-Diciembre</a></li>
                             <li><a href="{{route('seguimiento.indextsms8')}}">Enero-Junio</a></li>
                         </ul>
@@ -139,9 +140,10 @@
                 <ul id="inf" class="list-unstyled collapse">
                     <li><a href="{{route('seguimiento.indexinfs')}}">Todos</a></li>
                     <li><a href="#infs" data-toggle="collapse">
-                        Periodo
+                         Periodo
                         </a></li>
                         <ul id="infs" class="list-unstyled collapse">
+                           
                             <li><a href="{{route('seguimiento.indexinfss7')}}">Agosto-Diciembre</a></li>
                             <li><a href="{{route('seguimiento.indexinfss8')}}">Enero-Junio</a></li>
                         </ul>
@@ -156,10 +158,140 @@
                 <ul id="iged" class="list-unstyled collapse">
                     <li><a href="{{route('seguimiento.indexiges')}}">Todos</a></li>
                     <li><a href="#igesss" data-toggle="collapse">
-                        Periodo
+                         Periodo
                         </a></li>
                         <ul id="igesss" class="list-unstyled collapse">
-      
+                            
+                            <li><a href="{{route('seguimiento.indexigess7')}}">Agosto-Diciembre</a></li>
+                            <li><a href="{{route('seguimiento.indexigess8')}}">Enero-Junio</a></li>
+                        </ul>
+                </ul>
+            </li>
+            @endif
+
+            @if(Auth::user()->ServEsc())
+            <li><a href="{{route('alumnos2')}}"><i class="fas fa-user-graduate"></i> Alumnos Registrados</a></li>
+            @endif
+            @if(Auth::user()->ServEsc() or Auth::user()->jefeige())
+            <li>
+                <a href="#ige" data-toggle="collapse">
+                    <i class="fas fa-briefcase"></i> IGE
+                </a>
+                <ul id="ige" class="list-unstyled collapse">
+                    <li><a href="{{route('seguimiento2.indexige')}}">Todos</a></li>
+                    <li><a href="#igess" data-toggle="collapse">
+                         Periodo
+                        </a></li>
+                        <ul id="igess" class="list-unstyled collapse">
+                            
+                            <li><a href="{{route('seguimiento.indexiges7')}}">Agosto-Diciembre</a></li>
+                            <li><a href="{{route('seguimiento.indexiges8')}}">Enero-Junio</a></li>
+                        </ul>
+                </ul>
+            </li>
+            @endif
+            @if(Auth::user()->ServEsc() or Auth::user()->jefeind())
+            <li>
+                <a href="#ii" data-toggle="collapse">
+                    <i class="fas fa-industry"></i> IND
+                </a>
+                <ul id="ii" class="list-unstyled collapse">
+                    <li><a href="{{route('seguimiento.indexind')}}">Todos</a></li>
+                    <li><a href="#indss" data-toggle="collapse">
+                         Periodo
+                        </a></li>
+                        <ul id="indss" class="list-unstyled collapse">
+                            
+                            <li><a href="{{route('seguimiento.indexinds7')}}">Agosto-Diciembre</a></li>
+                            <li><a href="{{route('seguimiento.indexinds8')}}">Enero-Junio</a></li>
+                        </ul>
+                </ul>
+            </li>
+            @endif
+            @if(Auth::user()->ServEsc() or Auth::user()->jefeisc())
+            <li>
+                <a href="#isc" data-toggle="collapse">
+                    <i class="fa fa-laptop"></i> ISC
+                </a>
+                <ul id="isc" class="list-unstyled collapse">
+                    <li><a href="{{route('seguimiento.indexisc')}}">Todos</a></li>
+                    <li><a href="#iscs" data-toggle="collapse">
+                         Periodo
+                        </a></li>
+                        <ul id="iscs" class="list-unstyled collapse">
+                           
+                            <li><a href="{{route('seguimiento.indexiscs7')}}">Agosto-Diciembre</a></li>
+                            <li><a href="{{route('seguimiento.indexiscs8')}}">Enero-Junio</a></li>
+                        </ul>
+                </ul>
+            </li>
+            @endif
+            @if(Auth::user()->ServEsc() or Auth::user()->jefela())
+            <li>
+                <a href="#admon" data-toggle="collapse">
+                    <i class="fas fa-building"></i> ADMON
+                </a>
+                <ul id="admon" class="list-unstyled collapse">
+                    <li><a href="{{route('seguimiento.indexla')}}">Todos</a></li>
+                    <li><a href="#las" data-toggle="collapse">
+                         Periodo
+                        </a></li>
+                        <ul id="las" class="list-unstyled collapse">
+                          
+                            <li><a href="{{route('seguimiento.indexlas7')}}">Agosto-Diciembre</a></li>
+                            <li><a href="{{route('seguimiento.indexlas8')}}">Enero-Junio</a></li>
+                        </ul>
+                </ul>
+            </li>
+            @endif
+            @if(Auth::user()->ServEsc() or Auth::user()->jefetsm())
+            <li>
+                <a href="#tsm" data-toggle="collapse"> 
+                    <ion-icon md="md-flashlight" name="flashlight"></ion-icon>TSM
+                </a>
+                <ul id="tsm" class="list-unstyled collapse">
+                    <li><a href="{{route('seguimiento.indextsm')}}">Todos</a></li>
+                    <li><a href="#tsms" data-toggle="collapse">
+                         Periodo
+                        </a></li>
+                        <ul id="tsms" class="list-unstyled collapse">
+                           
+                            <li><a href="{{route('seguimiento.indextsms7')}}">Agosto-Diciembre</a></li>
+                            <li><a href="{{route('seguimiento.indextsms8')}}">Enero-Junio</a></li>
+                        </ul>
+                </ul>
+            </li>
+            @endif
+            @if(Auth::user()->ServEsc() or Auth::user()->jefeinfs())
+            <li>
+                <a href="#inf" data-toggle="collapse">
+                    <i class="fas fa-desktop"></i> INF
+                </a>
+                <ul id="inf" class="list-unstyled collapse">
+                    <li><a href="{{route('seguimiento.indexinfs')}}">Todos</a></li>
+                    <li><a href="#infs" data-toggle="collapse">
+                         Periodo
+                        </a></li>
+                        <ul id="infs" class="list-unstyled collapse">
+                            
+                            <li><a href="{{route('seguimiento.indexinfss7')}}">Agosto-Diciembre</a></li>
+                            <li><a href="{{route('seguimiento.indexinfss8')}}">Enero-Junio</a></li>
+                        </ul>
+                </ul>
+            </li>
+            @endif
+            @if(Auth::user()->ServEsc() or Auth::user()->jefeiges())
+            <li>
+                <a href="#iged" data-toggle="collapse">
+                    <ion-icon md="md-business" name="business"></ion-icon> IGE-ED
+                </a>
+                <ul id="iged" class="list-unstyled collapse">
+                    <li><a href="{{route('seguimiento.indexiges')}}">Todos</a></li>
+                    <li><a href="#igesss" data-toggle="collapse">
+                         Periodo
+                        </a></li>
+                        <ul id="igesss" class="list-unstyled collapse">
+                           
                             <li><a href="{{route('seguimiento.indexigess7')}}">Agosto-Diciembre</a></li>
                             <li><a href="{{route('seguimiento.indexigess8')}}">Enero-Junio</a></li>
                         </ul>
@@ -167,4 +299,5 @@
             </li>
             @endif
         </ul>
+       
     </div>

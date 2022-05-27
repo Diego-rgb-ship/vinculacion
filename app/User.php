@@ -67,6 +67,13 @@ class User extends Authenticatable
         }
 
     }
+    public function ServEsc()
+    {
+        if($this->rol ==='SerEscolares'){
+            return $this->rol ==='SerEscolares';
+        }
+
+    }
 
     public function adminjefes()
     {

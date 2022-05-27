@@ -93,7 +93,7 @@
 			        @endif
 					<div class="form-group{{ $errors->has('semestre') ? ' has-error' : '' }}">
 					{!!Form::label('semestre', 'Semestre: ')!!}
-					{{Form::select('semestre', ['' => '', '5'=>'5','6'=>'6','7'=>'7','8'=>'8','9'=>'9'], $alumno->semestre, ['class'=>'form-control'])}}
+					{{Form::select('semestre', ['' => '','7'=>'7','8'=>'8'], $alumno->semestre, ['class'=>'form-control'])}}
 					@if ($errors->has('semestre'))
 			        	<small class="text-danger">
 				        	<strong>{{ $errors->first('semestre') }}</strong>

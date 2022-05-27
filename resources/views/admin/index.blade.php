@@ -6,7 +6,9 @@
 @section('title1')
 <a href="{{ url('/admin/jefecarrera/create')}}" class="btn btn-outline-secondary" style="size: 1px; text-align: left;">Registrar nuevo jefe de carrera</a>
 @endsection
-
+@section('title2')
+<a href="{{ url('/admin/serviciosescolares/create')}}" class="btn btn-outline-secondary" style="size: 1px; text-align: left;">Registrar usuario de Ser. Escolares</a>
+@endsection
 @section('title3')
  <a href="{{ url('/admin/users/create')}}" class="btn btn-outline-secondary" style="size: 1px; text-align: left;">Registrar usuario de tipo otro</a>
 @endsection

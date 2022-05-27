@@ -8,10 +8,10 @@
 		{!!Form::label('nombre', 'Nombre(s)')!!}
 		{!!Form::text('nombres', $user->nombres,['class'=>'form-control', 'placeholder'=>'Nombre(s)', 'required'])!!}
 
-		{!!Form::label('apellido_p', 'Apellido paterno')!!}
+		{!!Form::label('apellido_p', 'Primer apellido')!!}
 		{!!Form::text('apellido_p', $user->apellido_p,['class'=>'form-control', 'placeholder'=>'Apellido paterno', 'required'])!!}
 
-		{!!Form::label('apellido_m', 'Apllido materno')!!}
+		{!!Form::label('apellido_m', 'Segundo apellido')!!}
 		{!!Form::text('apellido_m', $user->apellido_m,['class'=>'form-control', 'placeholder'=>'Apellido materno', 'required'])!!}
 
 		{!!Form::label('no_identificacion', 'Numero de identificación')!!}
